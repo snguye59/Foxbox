@@ -1,0 +1,38 @@
+.modal {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 200px 10px;
+
+  display: grid;
+  align-items: start;
+  justify-items: center;
+}
+
+@media (max-width: 330px) {
+  .modal {
+    padding: 200px 0;
+  }
+}
+
+.inputGroup {
+  display: grid;
+  gap: 10px;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+}
+
+@media (max-width: 400px) {
+  .inputGroup {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .inputGroup > span {
+    display: none;
+  }
+}

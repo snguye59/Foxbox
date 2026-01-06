@@ -1,0 +1,136 @@
+.card {
+  width: clamp(300px, 100%, 370px);
+  padding: 40px 30px;
+  border-radius: 20px;
+
+  display: grid;
+  gap: 30px;
+}
+
+.card.light {
+  background: white;
+  box-shadow: var(--light-medium-shadow);
+}
+
+.card.dark {
+  background: #06182c;
+  box-shadow: 0px 20px 40px rgba(0, 215, 255, 0.15);
+}
+
+.header {
+  display: grid;
+  gap: 20px;
+}
+
+.header > div:nth-of-type(1) {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.title {
+  display: grid;
+  gap: 8px;
+}
+
+.title h5 {
+  font: var(--sf-pro-display-h5);
+}
+
+.title p {
+  font: var(--sf-pro-text-small);
+}
+
+.card.light .title h5 {
+  color: var(--dark-text);
+}
+
+.card.light .title p {
+  color: var(--dark-text2);
+}
+
+.card.dark .title h5 {
+  color: var(--light-text);
+}
+
+.card.dark .title p {
+  color: var(--light-text2);
+}
+
+.badge {
+  height: 68px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+
+  display: grid;
+  gap: 4px;
+  justify-self: end;
+  justify-items: center;
+}
+
+.badge h5 {
+  font: var(--sf-pro-display-h5);
+}
+
+.badge p {
+  font: var(--sf-pro-text-small);
+}
+
+.card.light .badge {
+  background: #eeeeee;
+}
+
+.card.light .badge h5 {
+  color: var(--dark-text);
+}
+
+.card.light .badge p {
+  color: var(--dark-text2);
+}
+
+.card.dark .badge {
+  background: #2e4869;
+}
+
+.card.dark .badge h5 {
+  color: var(--light-text);
+}
+
+.card.dark .badge p {
+  color: var(--light-text2);
+}
+
+.card.light .divider {
+  background: #bbbbbb;
+}
+
+.card.dark .divider {
+  background: #2e4869;
+}
+
+.features {
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+}
+
+.button {
+  height: 54px;
+  border-radius: 10px;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--orange-accent);
+  color: white;
+  opacity: 0.9;
+
+  font: var(--sf-pro-text-medium);
+  font-weight: 600;
+
+  transition: var(--fast-transition);
+}
+
+.button:hover {
+  opacity: 1;
+}

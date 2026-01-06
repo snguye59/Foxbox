@@ -1,0 +1,15 @@
+.button {
+  white-space: nowrap;
+
+  display: grid;
+  gap: 4px;
+  grid-auto-flow: column;
+  align-items: center;
+
+  font: var(--sf-pro-text-caption);
+  font-weight: 600;
+}
+
+.button:hover svg {
+  transform: translateX(4px);
+}

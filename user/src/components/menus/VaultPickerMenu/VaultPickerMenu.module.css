@@ -1,0 +1,67 @@
+.menu {
+  overflow: auto;
+  width: 252px;
+  height: 264px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+
+  display: grid;
+  gap: 4px;
+  align-content: start;
+
+  background: white;
+  box-shadow: var(--light-medium-shadow);
+
+  scroll-behavior: smooth;
+}
+
+.menu :global {
+  animation: slideDownScaleUpFadeIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.button {
+  height: 54px;
+  padding: 6px;
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: 12px 36px auto;
+  align-items: center;
+  justify-items: start;
+  gap: 4px;
+
+  transition: var(--fast-transition);
+}
+
+.button:hover,
+.button.active {
+  background: #eeeeee;
+}
+
+.texts {
+  margin-left: 6px;
+
+  display: grid;
+  justify-items: start;
+}
+
+.texts p {
+  max-width: 154px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.texts p:nth-of-type(1) {
+  color: var(--dark-text);
+
+  font: var(--sf-pro-text-small);
+  font-weight: 500;
+}
+
+.texts p:nth-of-type(2) {
+  color: var(--dark-text2);
+
+  font: var(--sf-pro-text-tiny);
+}

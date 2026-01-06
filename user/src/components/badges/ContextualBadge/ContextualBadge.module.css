@@ -1,0 +1,49 @@
+.badge {
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+}
+
+.badge.big {
+  width: 58px;
+  height: 58px;
+}
+
+.badge.small {
+  width: 40px;
+  height: 40px;
+}
+
+.badge.info {
+  background: rgba(5, 114, 236, 0.1);
+}
+
+.badge.error {
+  background: rgba(255, 65, 54, 0.1);
+}
+
+.iconBackground {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+}
+
+.badge.info .iconBackground {
+  background: rgba(5, 114, 236, 0.2);
+}
+
+.badge.error .iconBackground {
+  background: rgba(255, 65, 54, 0.2);
+}
+
+.badge.info svg path {
+  fill: var(--blue-accent);
+}
+
+.badge.error svg path {
+  fill: var(--error-semantic);
+}

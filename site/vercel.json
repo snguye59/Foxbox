@@ -1,0 +1,25 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/home"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/register",
+      "destination": "https://app.foxbox.sh/register",
+      "permanent": true
+    },
+    {
+      "source": "/login",
+      "destination": "https://app.foxbox.sh/login",
+      "permanent": true
+    },
+    {
+      "source": "/app/:path*",
+      "destination": "https://app.foxbox.sh/:path*",
+      "permanent": true
+    }
+  ]
+}

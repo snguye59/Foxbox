@@ -1,0 +1,19 @@
+.button {
+  position: relative;
+
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  gap: 10px;
+
+  font: var(--sf-pro-display-h5);
+}
+
+.button.showText::after {
+  content: "Foxbox";
+
+  color: var(--orange-accent);
+  background: linear-gradient(to right, black 50%, var(--orange-accent) 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

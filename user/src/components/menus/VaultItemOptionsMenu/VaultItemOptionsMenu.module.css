@@ -1,0 +1,39 @@
+.menu {
+  z-index: 1;
+  
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+
+  display: grid;
+  gap: 6px;
+
+  background: white;
+  box-shadow: var(--light-medium-shadow);
+}
+
+.menu :global {
+  animation: slideDownScaleUpFadeIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.button {
+  height: 36px;
+  padding: 6px 12px;
+  border-radius: 6px;
+
+  display: grid;
+  grid-template-columns: 24px auto;
+  gap: 6px;
+  align-items: center;
+  justify-items: start;
+
+  font: var(--sf-pro-text-small);
+  font-weight: 500;
+
+  transition: var(--fast-transition);
+}
+
+.button:hover {
+  background: #eeeeee;
+}

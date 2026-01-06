@@ -1,0 +1,15 @@
+:root {
+  /* Display */
+  --sf-pro-display-h1: bold 60px/72px "SF-Pro-Display";
+  --sf-pro-display-h2: bold 48px/60px "SF-Pro-Display";
+  --sf-pro-display-h3: bold 36px/44px "SF-Pro-Display";
+  --sf-pro-display-h4: bold 30px/38px "SF-Pro-Display";
+  --sf-pro-display-h5: bold 24px/32px "SF-Pro-Display";
+
+  /* Text */
+  --sf-pro-text-large: normal 20px/30px "SF-Pro-Text";
+  --sf-pro-text-medium: normal 18px/28px "SF-Pro-Text";
+  --sf-pro-text-caption: normal 16px/24px "SF-Pro-Text";
+  --sf-pro-text-small: normal 14px/20px "SF-Pro-Text";
+  --sf-pro-text-tiny: normal 12px/18px "SF-Pro-Text";
+}

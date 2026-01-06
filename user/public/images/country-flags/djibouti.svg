@@ -1,0 +1,31 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_dd_9227_41190)">
+<g clip-path="url(#clip0_9227_41190)">
+<rect x="2" y="4.85718" width="20" height="14.2857" rx="1.55491" fill="#249F58"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2 4.85718H22V12.4762H2V4.85718Z" fill="#3ECBF8"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2 4.85718L13.4286 12L2 19.1429V4.85718Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.28584 13.1905L4.88584 13.9267L5.1525 12.3677L4.02108 11.2629L5.58584 11.0372L6.28584 9.61908L6.98584 11.0381L8.5506 11.2638L7.41727 12.3686L7.68393 13.9267" fill="#F93939"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_dd_9227_41190" x="0.833819" y="4.46845" width="22.3324" height="16.618" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.777454"/>
+<feGaussianBlur stdDeviation="0.58309"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.258824 0 0 0 0 0.278431 0 0 0 0 0.298039 0 0 0 0.08 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_9227_41190"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="0.0485909"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.258824 0 0 0 0 0.278431 0 0 0 0 0.298039 0 0 0 0.32 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_9227_41190" result="effect2_dropShadow_9227_41190"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_9227_41190" result="shape"/>
+</filter>
+<clipPath id="clip0_9227_41190">
+<rect x="2" y="4.85718" width="20" height="14.2857" rx="1.55491" fill="white"/>
+</clipPath>
+</defs>
+</svg>

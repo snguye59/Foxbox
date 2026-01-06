@@ -1,0 +1,70 @@
+.menu {
+  z-index: 1;
+  position: relative;
+
+  width: 100%;
+  height: 264px;
+  padding-top: 12px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+
+  display: grid;
+  gap: 12px;
+
+  background: white;
+  box-shadow: var(--light-medium-shadow);
+}
+
+.menu :global {
+  animation: slideDownScaleUpFadeIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.title {
+  margin-left: 12px;
+
+  font: var(--sf-pro-text-caption);
+  font-weight: 500;
+}
+
+.illustrations {
+  overflow: scroll;
+  padding: 12px;
+  margin-top: -12px;
+
+  display: grid;
+  gap: 12px;
+
+  scroll-behavior: smooth;
+}
+
+.category {
+  display: grid;
+  gap: 6px;
+  width: 228px;
+}
+
+.category p {
+  font: var(--sf-pro-text-tiny);
+  font-weight: 500;
+}
+
+.list {
+  display: grid;
+  gap: 6px;
+  justify-items: start;
+}
+
+.list p {
+  color: var(--dark-text2);
+
+  font: var(--sf-pro-text-tiny);
+  font-weight: 500;
+}
+
+.buttons {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 28px);
+  gap: 12px;
+}

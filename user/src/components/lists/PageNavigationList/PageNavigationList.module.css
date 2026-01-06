@@ -1,0 +1,40 @@
+.list {
+  display: grid;
+  gap: 4px;
+}
+
+.button {
+  width: 212px;
+  height: 36px;
+  padding: 0 6px;
+  border-radius: 8px;
+
+  display: grid;
+  grid-template-columns: 24px auto;
+  gap: 10px;
+  align-items: center;
+
+  transition: var(--fast-transition);
+}
+
+.button:hover,
+.button.active {
+  box-shadow: inset 0 0 0 1px #cccccc;
+
+  background: white;
+}
+
+.button.disabled {
+  pointer-events: none;
+}
+
+.name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: var(--dark-text2);
+
+  font: var(--sf-pro-text-small);
+  font-weight: 500;
+}

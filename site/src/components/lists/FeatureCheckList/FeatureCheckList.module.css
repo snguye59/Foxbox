@@ -1,0 +1,65 @@
+.list {
+  width: 100%;
+
+  display: grid;
+  gap: 12px;
+}
+
+.feature {
+  position: relative;
+
+  width: 100%;
+
+  display: grid;
+  grid-auto-flow: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: start;
+
+  font: var(--sf-pro-text-caption);
+}
+
+.feature.highlight {
+  font-weight: bold;
+}
+
+.feature.light {
+  color: black;
+}
+
+.feature.dark {
+  color: white;
+}
+
+.icon {
+  display: grid;
+}
+
+.feature.light .icon svg path {
+  fill: var(--purple-accent);
+}
+
+.feature.dark .icon svg path {
+  fill: var(--cyan-accent);
+}
+
+.button.right {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+}
+
+.tooltip.right {
+  top: 50%;
+  transform: translate(28.5px, -50%);
+
+  width: 300px;
+}
+
+.tooltip.top {
+  bottom: 100%;
+  left: 0;
+  transform: translateY(-4px);
+}

@@ -1,0 +1,56 @@
+.button {
+  height: 54px;
+  padding: 0 12px;
+  border-radius: 16px;
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 16px;
+
+  box-shadow: var(--light-soft-shadow);
+  background: linear-gradient(180deg, #ffffff 0%, #d9dfff 100%);
+
+  font: var(--sf-pro-text-caption);
+  font-weight: 600;
+
+  transition: var(--medium-transition);
+}
+
+.button:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0px 20px 40px rgba(23, 0, 102, 0.2),
+    0px 10px 20px rgba(23, 0, 102, 0.2);
+}
+
+.ring {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px var(--orange-accent);
+
+  display: grid;
+  place-items: center;
+}
+
+.iconBackground {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--orange-accent);
+}
+
+.iconBackground svg path {
+  fill: white;
+}
+
+.iconBackground svg path:nth-of-type(1) {
+  opacity: 0.6;
+}

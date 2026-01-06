@@ -1,0 +1,31 @@
+.menu {
+  z-index: 2;
+
+  width: 100%;
+  max-width: 202px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  white-space: nowrap;
+
+  display: grid;
+  gap: 12px;
+
+  background: white;
+  box-shadow: var(--light-medium-shadow);
+}
+
+.menu :global {
+  animation: slideDownScaleUpFadeIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.title {
+  font: var(--sf-pro-text-small);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.buttons {
+  display: grid;
+  gap: 6px;
+}

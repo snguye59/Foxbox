@@ -1,0 +1,32 @@
+.animation {
+  position: relative;
+
+  transition: var(--medium-transition);
+}
+
+.dataVisualization {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.developer {
+  position: absolute;
+  top: 80.3px;
+  left: 37px;
+}
+
+.matrix {
+  position: absolute;
+  top: 249.3px;
+  left: 223.59px;
+
+  width: 432.81px;
+  height: 269.66px;
+
+  opacity: 0;
+}
+
+.matrix:global {
+  animation: fadeIn 1s forwards 4s;
+}

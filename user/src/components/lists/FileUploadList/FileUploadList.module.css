@@ -1,0 +1,52 @@
+.list {
+  position: relative;
+
+  width: 100%;
+  white-space: nowrap;
+
+  display: grid;
+  grid-template-columns: 56px auto;
+  gap: 10px;
+  align-items: start;
+
+  font: var(--sf-pro-text-small);
+}
+
+.fileIcon {
+  display: grid;
+
+  filter: opacity(60%);
+}
+
+.info {
+  display: grid;
+  gap: 4px;
+}
+
+.name {
+  max-width: calc(100% - 22px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: var(--dark-text);
+}
+
+.button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.progress {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+  justify-items: start;
+
+  color: var(--dark-text2);
+}
+
+.progress p:nth-of-type(2) {
+  justify-self: end;
+}

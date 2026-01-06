@@ -1,0 +1,26 @@
+.input {
+  width: 100%;
+
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+}
+
+.field {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px #cccccc;
+
+  display: grid;
+
+  background: white;
+}
+
+.field:focus-within {
+  box-shadow: inset 0 0 0 1px var(--blue-accent);
+}
+
+.field textarea {
+  resize: none;
+}

@@ -1,0 +1,47 @@
+.button {
+  position: relative;
+
+  display: grid;
+}
+
+.button svg path {
+  opacity: 0.6;
+}
+
+.button.dark svg path {
+  fill: white;
+}
+
+.button.showArrow::before {
+  position: absolute;
+
+  width: 60%;
+  height: 60%;
+  content: "";
+
+  background: white;
+}
+
+.button.showArrow::before :global {
+  animation: fadeIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.button.right::before {
+  top: 50%;
+  right: -2.5px;
+  transform: translateX(100%) translateY(-50%) rotate(45deg);
+
+  border-radius: 0px 0px 0px 2px;
+
+  box-shadow: -10px 0px 20px 0px #cccccc;
+}
+
+.button.top::before {
+  top: -2.5px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%) rotate(45deg);
+
+  border-radius: 0px 0px 2px 0px;
+
+  box-shadow: 0px 10px 20px 0px #cccccc;
+}

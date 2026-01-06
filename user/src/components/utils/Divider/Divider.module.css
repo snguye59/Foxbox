@@ -1,0 +1,17 @@
+.divider.horizontal {
+  width: 1px;
+  height: 100%;
+}
+
+.divider.vertical {
+  width: 100%;
+  height: 1px;
+}
+
+.divider.light {
+  background: #bbbbbb;
+}
+
+.divider.dark {
+  background: #2e4869;
+}

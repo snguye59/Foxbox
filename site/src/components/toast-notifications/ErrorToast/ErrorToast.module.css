@@ -1,0 +1,39 @@
+.toast {
+  padding: 24px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 376px;
+
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 36px auto;
+
+  background: #fbe0d9;
+  box-shadow: var(--light-medium-shadow);
+}
+
+.toast :global {
+  animation: fadeIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.toast svg path {
+  fill: var(--error-semantic);
+}
+
+.texts {
+  display: grid;
+  gap: 10px;
+}
+
+.texts p:nth-of-type(1) {
+  color: var(--dark-text);
+
+  font: var(--sf-pro-text-caption);
+  font-weight: 600;
+}
+
+.texts p:nth-of-type(2) {
+  color: var(--dark-text2);
+
+  font: var(--sf-pro-text-small);
+}

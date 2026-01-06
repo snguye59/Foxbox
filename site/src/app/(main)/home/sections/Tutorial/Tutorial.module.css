@@ -1,0 +1,163 @@
+.section {
+  position: relative;
+
+  width: 100%;
+  margin-top: clamp(200px, 37vw, 460px);
+
+  display: grid;
+  justify-items: center;
+}
+
+@media (max-width: 690px) {
+  .section {
+    margin-top: clamp(440px, 108vw, 740px);
+  }
+}
+
+.content {
+  position: relative;
+
+  width: 100%;
+  max-width: 1250px;
+  padding: 0 30px;
+
+  display: grid;
+  gap: 60px;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+@media (max-width: 1110px) {
+  .content {
+    grid-template-columns: 630px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 1064px) {
+  .content {
+    gap: 40px;
+    grid-template-columns: none;
+  }
+}
+
+@media (max-width: 690px) {
+  .content {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 330px) {
+  .content {
+    padding: 0 10px;
+  }
+}
+
+.grid {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  transform: translateX(-100%) translateY(100%);
+}
+
+@media (max-width: 1064px) {
+  .grid {
+    top: 50px;
+    /* left: 600px; */
+    left: auto;
+    right: 0;
+    bottom: auto;
+
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@media (max-width: 830px) {
+  .grid {
+    left: 600px;
+    right: auto;
+  }
+}
+
+@media (max-width: 790px) {
+  .grid {
+    left: auto;
+    right: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    display: none;
+  }
+}
+
+.cards {
+  max-width: 770px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 660px) {
+  .cards {
+    grid-template-columns: none;
+  }
+
+  .cards > :nth-of-type(2) {
+    justify-self: end;
+  }
+}
+
+@media (max-width: 500px) {
+  .cards > :nth-of-type(2) {
+    justify-self: start;
+  }
+}
+
+.texts {
+  max-width: 360px;
+
+  display: grid;
+  gap: 20px;
+  justify-items: start;
+}
+
+.caption {
+  font: var(--sf-pro-text-caption);
+  font-weight: 600;
+  text-transform: uppercase;
+
+  color: var(--dark-text2);
+}
+
+.title {
+  font: var(--sf-pro-display-h3);
+
+  color: var(--dark-text);
+}
+
+.description {
+  font: var(--sf-pro-text-medium);
+
+  color: var(--dark-text);
+}
+
+@media (max-width: 900px) {
+  .title {
+    font: var(--sf-pro-display-h4);
+  }
+
+  .description {
+    max-width: 330px;
+
+    font: var(--sf-pro-text-caption);
+  }
+}
+
+@media (max-width: 1064px) {
+  .texts {
+    order: -1;
+  }
+}

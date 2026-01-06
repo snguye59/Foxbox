@@ -1,0 +1,40 @@
+.animation {
+  display: grid;
+  gap: 60px;
+}
+
+@media (max-width: 900px) {
+  .animation {
+    gap: 40px;
+  }
+}
+
+.row {
+  overflow: hidden;
+
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.row:hover .cards {
+  animation-play-state: paused;
+}
+
+.row:nth-child(2) .cards {
+  animation-direction: reverse;
+}
+
+.cards {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+.cards:global {
+  animation: 200s slide infinite linear;
+}
+
+.cards > div {
+  width: 454px;
+  margin: 0 15px;
+}

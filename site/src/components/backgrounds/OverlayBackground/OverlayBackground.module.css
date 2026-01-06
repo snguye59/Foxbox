@@ -1,0 +1,18 @@
+.background {
+  z-index: 5;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.background.darken :global {
+  animation: darken 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.background.blur :global {
+  animation: blur 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}

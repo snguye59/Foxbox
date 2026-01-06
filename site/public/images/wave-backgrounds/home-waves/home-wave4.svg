@@ -1,0 +1,26 @@
+<svg width="2560" height="1640" viewBox="0 0 2560 1640" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_5798_54000)">
+<path d="M2560 202.298L2453.33 168.8C2451.87 168.362 2450.39 167.917 2448.89 167.467C2340.82 135.05 2130.41 71.9357 1920 113.985C1823.4 133.98 1726.79 176.456 1630.19 218.931C1513.46 270.256 1396.73 321.58 1280 333.244C1163.27 345.741 1046.54 318.578 929.811 291.414C833.208 268.934 736.604 246.454 640 246.454C426.667 246.454 213.333 356.083 106.667 410.898L0 465.713V1540L106.667 1485.19C213.333 1430.37 426.667 1320.74 640 1320.74C736.604 1320.74 833.208 1343.22 929.812 1365.7C1046.54 1392.86 1163.27 1420.03 1280 1407.53C1396.73 1395.87 1513.46 1344.54 1630.19 1293.22C1726.79 1250.74 1823.4 1208.27 1920 1188.27C2130.41 1146.22 2340.82 1209.34 2448.89 1241.75C2450.39 1242.2 2451.87 1242.65 2453.33 1243.09L2560 1276.58V202.298Z" fill="#0A2540"/>
+<g filter="url(#filter0_f_5798_54000)">
+<circle cx="2121" cy="728" r="350" fill="#635BFF" fill-opacity="0.2"/>
+</g>
+<g filter="url(#filter1_f_5798_54000)">
+<circle cx="395" cy="639" r="300" fill="#00D7FF" fill-opacity="0.2"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_5798_54000" x="1323.63" y="-69.3698" width="1594.74" height="1594.74" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="223.685" result="effect1_foregroundBlur_5798_54000"/>
+</filter>
+<filter id="filter1_f_5798_54000" x="-288.46" y="-44.4598" width="1366.92" height="1366.92" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="191.73" result="effect1_foregroundBlur_5798_54000"/>
+</filter>
+<clipPath id="clip0_5798_54000">
+<rect width="2560" height="1640" fill="white" transform="matrix(-1 0 0 1 2560 0)"/>
+</clipPath>
+</defs>
+</svg>

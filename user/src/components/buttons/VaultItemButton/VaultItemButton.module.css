@@ -1,0 +1,29 @@
+.button {
+  display: grid;
+  grid-template-columns: 42px auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.texts {
+  display: grid;
+}
+
+.texts p {
+  text-align: start;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.texts p:nth-of-type(1) {
+  color: var(--dark-text);
+
+  font: var(--sf-pro-text-caption);
+}
+
+.texts p:nth-of-type(2) {
+  color: var(--dark-text2);
+
+  font: var(--sf-pro-text-tiny);
+}

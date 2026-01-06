@@ -1,0 +1,52 @@
+.sections {
+  width: 100%;
+
+  display: grid;
+  gap: 24px;
+}
+
+.sections h5 {
+  margin-bottom: 6px;
+  text-align: center;
+
+  font: var(--sf-pro-display-h5);
+}
+
+.inputGroup {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.toggleSwitchInput {
+  display: grid;
+  grid-template-columns: auto 28px;
+}
+
+.toggleSwitchInput p:nth-of-type(1) {
+  color: var(--dark-text);
+
+  font: var(--sf-pro-text-small);
+  font-weight: 600;
+}
+
+.toggleSwitchInput p:nth-of-type(2) {
+  max-width: 330px;
+
+  color: var(--dark-text2);
+
+  font: var(--sf-pro-text-small);
+}
+
+.toggleSwitchInput div:last-of-type {
+  margin-top: 2px;
+}
+
+.texts {
+  display: grid;
+  gap: 8px;
+}
+
+.button {
+  margin-top: 6px;
+}

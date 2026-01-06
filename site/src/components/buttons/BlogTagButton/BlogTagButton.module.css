@@ -1,0 +1,57 @@
+.button {
+  padding: 10px 20px;
+  border-radius: 30px;
+
+  display: grid;
+  grid-auto-flow: column;
+  gap: 6px;
+  align-items: center;
+
+  opacity: 0.9;
+
+  font: var(--sf-pro-text-caption);
+  font-weight: 600;
+  text-transform: uppercase;
+
+  transition: var(--fast-transition);
+}
+
+.button:hover {
+  opacity: 1;
+}
+
+.button:hover svg {
+  transform: translateX(2px);
+}
+
+.button.news {
+  background: var(--red-tag);
+}
+
+.button.tutorial {
+  background: var(--pink-tag);
+}
+
+.button.security {
+  background: var(--blue-tag);
+}
+
+.button.developer {
+  background: var(--gray-tag);
+}
+
+.button.advice {
+  background: var(--green-tag);
+}
+
+.button.insight {
+  background: var(--yellow-tag);
+}
+
+.button.business {
+  background: var(--purple-tag);
+}
+
+.button.design {
+  background: var(--orange-tag);
+}

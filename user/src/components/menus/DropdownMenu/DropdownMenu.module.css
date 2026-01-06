@@ -1,0 +1,30 @@
+.menu {
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+
+  display: grid;
+  gap: 12px;
+
+  background: white;
+  box-shadow: var(--light-medium-shadow);
+}
+
+.menu :global {
+  animation: slideDownScaleUpFadeIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.title {
+  margin-left: 12px;
+
+  font: var(--sf-pro-text-caption);
+  font-weight: 500;
+}
+
+.buttons {
+  margin: 0 12px;
+
+  display: grid;
+  gap: 4px;
+}

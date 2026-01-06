@@ -1,0 +1,82 @@
+.form {
+  position: relative;
+
+  width: clamp(300px, 100%, 580px);
+  padding: 60px 70px;
+  border-radius: 12px;
+
+  background: white;
+  box-shadow: var(--light-heavy-shadow);
+
+  transition: var(--medium-transition);
+}
+
+.form.showError :global {
+  animation: shake 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@media (max-width: 510px) {
+  .form {
+    padding: 30px 35px;
+  }
+}
+
+.sections {
+  display: grid;
+  gap: 30px;
+}
+
+.sections h5 {
+  font: var(--sf-pro-display-h5);
+}
+
+.password {
+  position: relative;
+}
+
+.link {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  color: var(--blue-accent);
+  opacity: 0.9;
+
+  font: var(--sf-pro-text-small);
+  font-weight: 600;
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+.checkbox {
+  display: grid;
+  grid-template-columns: 16px auto;
+  gap: 8px;
+  justify-items: start;
+  align-items: center;
+}
+
+.checkbox label {
+  white-space: normal;
+}
+
+.texts {
+  justify-self: center;
+
+  color: rgba(0, 0, 0, 0.7);
+
+  font: var(--sf-pro-text-small);
+}
+
+.texts a {
+  color: var(--blue-accent);
+  opacity: 0.9;
+
+  font-weight: 600;
+}
+
+.texts a:hover {
+  opacity: 1;
+}

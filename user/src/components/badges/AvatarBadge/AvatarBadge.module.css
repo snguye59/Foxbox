@@ -1,0 +1,28 @@
+.badge {
+  border-radius: 30px;
+  white-space: nowrap;
+
+  display: grid;
+  grid-auto-flow: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.badge.showName {
+  padding: 10px;
+
+  box-shadow: var(--light-medium-shadow);
+}
+
+.badge p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font: var(--sf-pro-text-small);
+  font-weight: 500;
+}
+
+.avatar {
+  border-radius: 50%;
+}

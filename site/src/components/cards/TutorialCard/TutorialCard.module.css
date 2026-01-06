@@ -1,0 +1,58 @@
+.card {
+  position: relative;
+
+  width: clamp(300px, 100%, 370px);
+  overflow: hidden;
+  border-radius: 30px;
+
+  background: white;
+  box-shadow: var(--light-medium-shadow);
+}
+
+.badge {
+  position: absolute;
+  top: 206px;
+  padding: 0 20px;
+}
+
+.background {
+  position: relative;
+
+  height: 228px;
+  overflow: hidden;
+
+  display: grid;
+  place-items: center;
+}
+
+.image {
+  position: absolute;
+
+  width: 399px;
+  height: 228px;
+
+  transition: var(--medium-transition);
+}
+
+.card:hover .image {
+  scale: 1.05;
+}
+
+.texts {
+  padding: 30px 20px;
+
+  display: grid;
+  gap: 10px;
+}
+
+.texts h5 {
+  color: var(--dark-text);
+
+  font: var(--sf-pro-display-h5);
+}
+
+.texts p {
+  color: var(--dark-text2);
+
+  font: var(--sf-pro-text-small);
+}

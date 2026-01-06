@@ -1,0 +1,10 @@
+.toasts {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+
+  padding: 10px;
+
+  display: grid;
+  gap: 10px;
+}

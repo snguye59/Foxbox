@@ -1,0 +1,44 @@
+.badge {
+  padding: 8px 20px;
+  border-radius: 20px;
+  white-space: nowrap;
+
+  display: grid;
+  align-items: center;
+
+  font: var(--sf-pro-text-small);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge.news {
+  background: var(--red-tag);
+}
+
+.badge.tutorials {
+  background: var(--pink-tag);
+}
+
+.badge.security {
+  background: var(--blue-tag);
+}
+
+.badge.technology {
+  background: var(--gray-tag);
+}
+
+.badge.advice {
+  background: var(--green-tag);
+}
+
+.badge.insight {
+  background: var(--yellow-tag);
+}
+
+.badge.business {
+  background: var(--purple-tag);
+}
+
+.badge.design {
+  background: var(--orange-tag);
+}

@@ -1,0 +1,205 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+		  allow read, delete: if request.auth != null && 
+      							         request.auth.uid == userId;
+      
+      allow create: if request.auth != null && 
+      							   request.auth.uid == userId &&
+                       validateUserFields();
+      
+      allow update: if request.auth != null && 
+      							   request.auth.uid == userId &&
+                       validateUserFields() && 
+                       checkEncryptedKeysUnchanged();
+                   
+      function validateUserFields() {
+        return request.resource.data.keys().hasOnly(['profile', 'settings', 'encryptedKeys']) &&
+               validateProfile(request.resource.data.profile) &&
+               validateSettings(request.resource.data.settings)
+      }
+
+			function checkEncryptedKeysUnchanged() {
+  			return (resource.data.encryptedKeys.encryptedSecretKey == request.resource.data.encryptedKeys.encryptedSecretKey &&
+         				resource.data.encryptedKeys.publicKey == request.resource.data.encryptedKeys.publicKey &&
+         				resource.data.encryptedKeys.encryptedPrivateKey == request.resource.data.encryptedKeys.encryptedPrivateKey);
+			}
+      
+      function validateProfile(profile) {
+        return profile.keys().hasOnly(['name', 'email', 'avatar', 'reminder', 
+                                       'country', 'gender', 'birthday', 'summary']) &&
+               (profile.name is string && profile.name.size() <= 100) &&
+               (profile.email is string && profile.email.size() <= 320) &&
+               (!('reminder' in profile) || (profile.reminder is string && profile.reminder.size() <= 1000)) &&
+               (!('country' in profile) || validateCountry(profile.country)) &&
+               (!('gender' in profile) || (profile.gender is string && profile.gender.size() <= 20)) &&
+               (!('birthday' in profile) || (profile.birthday is string && profile.birthday.size() <= 10)) &&
+               (!('summary' in profile) || (profile.summary is string && profile.summary.size() <= 1000)) &&
+               validateAvatar(profile.avatar);
+      }
+      
+      function validateCountry(country) {
+  			return country is map &&
+        			 country.keys().hasOnly(['name', 'icon']) &&
+         			 country.name is string && country.name.size() <= 50 &&
+         			 country.icon is string && country.icon.size() <= 255;
+			}	
+      
+      function validateAvatar(avatar) {
+  			return avatar is map &&
+         			 avatar.keys().hasOnly(['name', 'image']) &&
+							 avatar.name is string && avatar.name.size() <= 50 &&
+               avatar.image is string && avatar.image.size() <= 255;
+			}
+
+      function validateSettings(settings) {
+        return settings.keys().hasOnly(['notifications', 'privacy']) &&
+               validateNotifications(settings.notifications) &&
+               validatePrivacy(settings.privacy);
+      }
+
+      function validateNotifications(notifications) {
+        return notifications.keys().hasOnly(['emailAlerts', 'pushNotifications', 'timeoutAlerts']) &&
+               notifications.emailAlerts is bool &&
+               notifications.pushNotifications is bool &&
+               notifications.timeoutAlerts is int &&
+               notifications.timeoutAlerts >= 15 &&
+               notifications.timeoutAlerts <= 300;
+      }
+
+      function validatePrivacy(privacy) {
+        return privacy.keys().hasOnly(['dataSharing', 'locationTracking']) &&
+               privacy.dataSharing is bool &&
+               privacy.locationTracking is bool;
+      }
+      
+      match /vaults/{vaultId} {
+        allow read, delete: if request.auth != null && 
+      							           request.auth.uid == userId;
+
+        allow create: if request.auth != null && 
+      							     request.auth.uid == userId &&
+                         validateVaultCreated(request.resource.data);
+
+        allow update: if request.auth != null && 
+      							     request.auth.uid == userId &&
+                         validateVaultUpdated(request.resource.data, vaultId);
+
+        function validateVaultCreated(vault) {
+          return vault.keys().hasOnly(['name', 'description', 'illustration', 'activityTrack', 
+                                       'passwordPrompt', 'timestamp']) &&
+                 vault.name is string &&
+                 validateIllustration(vault.illustration) &&
+                 (!('description' in vault) || vault.description is string) &&
+                 (!('activityTrack' in vault) || vault.activityTrack is bool) &&
+                 (!('passwordPrompt' in vault) || vault.passwordPrompt is bool)
+        }
+
+        function validateVaultUpdated(vault, vaultId) {
+          return vault.keys().hasOnly(['id', 'name', 'createdBy', 'createdByAvatar', 
+                                       'description', 'illustration', 'link', 'activityTrack', 
+                                       'passwordPrompt', 'size', 'timestamp']) &&
+                 vault.id == vaultId &&
+                 vault.name is string &&
+                 vault.link == "/user/vaults/" + vaultId &&
+                 vault.createdBy == request.auth.uid &&
+                 vault.size is int && vault.size >= 0 &&
+                 validateAvatar(vault.createdByAvatar) &&
+                 validateIllustration(vault.illustration) &&
+                 (!('description' in vault) || vault.description is string) &&
+                 (!('activityTrack' in vault) || vault.activityTrack is bool) &&
+                 (!('passwordPrompt' in vault) || vault.passwordPrompt is bool)
+        }
+
+        function validateIllustration(illustration) {
+  			  return illustration is map &&
+         			   illustration.keys().hasOnly(['name', 'image', 'background']) &&
+							   illustration.name is string && illustration.name.size() <= 50 &&
+                 illustration.image is string && illustration.image.size() <= 255 &&
+                 validateHexColor(illustration.background);
+			  }
+
+        function validateHexColor(color) {
+          return color.matches('^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$');
+        }
+                    
+        match /items/{itemId} {
+          allow read, delete: if request.auth != null && request.auth.uid == userId;
+
+          allow create, update: if request.auth != null && 
+                                   request.auth.uid == userId &&
+                                   validateVaultItemFields(request.resource.data);
+
+          function validateVaultItemFields(item) {
+            return item.keys().hasOnly(["name", "notes", "website", "username", 
+                                        "password", "cardholder", "brand", "cardNumber",
+                                        "cvv", "expirationDate", "title", "birthday", 
+                                        "firstName", "middleName", "lastName", "company", 
+                                        "ssn", "passportNumber", "licenseNumber", "email", 
+                                        "phoneNumber", "address1", "address2", "city", 
+                                        "state", "country", "zip", "tags", 
+                                        "category", "isFavorite", "isDeleted", "timestamps"]) &&
+                   item.name is string && 
+                   item.category in ['login', 'card', 'note', 'identity'] &&
+                   (!('notes' in item) || item.notes is string) &&
+                   (!('website' in item) || item.website is string) &&
+                   (!('username' in item) || item.username is string) &&
+                   (!('password' in item) || item.password is string) &&
+                   (!('cardholder' in item) || item.cardholder is string) &&
+                   (!('brand' in item) || item.brand is string) &&
+                   (!('cardNumber' in item) || item.cardNumber is string) &&
+                   (!('cvv' in item) || item.cvv is string) &&
+                   (!('expirationDate' in item) || item.expirationDate is string) &&
+                   (!('title' in item) || item.title is string) &&
+                   (!('birthDay' in item) || item.birthDay is string) &&
+                   (!('firstName' in item) || item.firstName is string) &&
+                   (!('middleName' in item) || item.middleName is string) &&
+                   (!('lastName' in item) || item.lastName is string) &&
+                   (!('company' in item) || item.company is string) &&
+                   (!('ssn' in item) || item.ssn is string) &&
+                   (!('passportNumber' in item) || item.passportNumber is string) &&
+                   (!('licenseNumber' in item) || item.licenseNumber is string) &&
+                   (!('email' in item) || item.email is string) &&
+                   (!('phoneNumber' in item) || item.phoneNumber is string) &&
+                   (!('address1' in item) || item.address1 is string) &&
+                   (!('address2' in item) || item.address2 is string) &&
+                   (!('city' in item) || item.city is string) &&
+                   (!('state' in item) || item.state is string) &&
+                   (!('country' in item) || item.country is string) &&
+                   (!('zip' in item) || item.zip is string) &&
+                   (!('tags' in item) || item.tags is string) &&
+                   (!('isFavorite' in item) || item.isFavorite is bool) &&
+                   (!('isDeleted' in item) || item.isDeleted is bool);
+          }
+        }
+      }
+      
+      match /dismissedAnnouncements/{announcementId} {
+        allow read: if request.auth != null && request.auth.uid == userId;
+
+        allow create: if request.auth != null &&
+                         request.auth.uid == userId &&
+                         request.resource.data.keys().hasOnly(['status']) &&
+                         request.resource.data.status == true;
+      }
+      
+      match /files/{fileId} {
+        allow read, delete: if request.auth != null && request.auth.uid == userId;
+
+        allow create: if request.auth != null && 
+                         request.auth.uid == userId &&
+                         validateFileData(request.resource.data);
+
+        function validateFileData(file) {
+          return file.keys().hasOnly(['encryptedData', 'timestamp']) &&
+                 file.encryptedData is string
+        }
+      }
+    }
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.layout {
+  overflow: hidden;
+  min-width: 100vw;
+  min-height: 100vh;
+
+  background: var(--light-background);
+}
+
+.modal {
+  overflow: scroll;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+
+  display: grid;
+  place-items: center;
+}
+
+@media (max-width: 690px) {
+  .modal {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 330px) {
+  .modal {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,31 @@
+.badge {
+  height: 28px;
+  padding: 0 10px 0 6px;
+  border-radius: 6px;
+
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+
+  background: #eeeeee;
+}
+
+.badgeValue {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.badgeValue p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font: var(--sf-pro-text-small);
+  font-weight: 500;
+}
+
+.badgeValue button {
+  margin-left: 2px;
+}

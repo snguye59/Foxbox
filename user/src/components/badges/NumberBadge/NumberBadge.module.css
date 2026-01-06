@@ -1,0 +1,10 @@
+.badge {
+  padding: 0 8px;
+  border-radius: 10px;
+
+  color: white;
+  background: var(--blue-accent);
+
+  font: var(--sf-pro-text-small);
+  font-weight: 500;
+}

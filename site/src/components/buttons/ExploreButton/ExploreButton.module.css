@@ -1,0 +1,38 @@
+.button {
+  padding: 10px 16px 10px 12px;
+  border-radius: 30px;
+  white-space: nowrap;
+
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 8px;
+
+  opacity: 0.9;
+
+  font: var(--sf-pro-text-caption);
+
+  transition: var(--fast-transition);
+}
+
+.button:hover {
+  opacity: 1;
+}
+
+.button svg path:nth-of-type(1) {
+  opacity: 0.6;
+}
+
+.button.light {
+  color: white;
+  background: var(--purple-accent);
+}
+
+.button.light svg path {
+  fill: white;
+}
+
+.button.dark {
+  color: black;
+  background: var(--cyan-accent);
+}

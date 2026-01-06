@@ -1,0 +1,57 @@
+.card {
+  position: relative;
+
+  padding: 12px;
+  width: 216px;
+  height: 200px;
+  border-radius: 16px;
+
+  display: grid;
+  gap: 12px;
+
+  background: white;
+  box-shadow: var(--light-soft-shadow);
+
+  font: var(--sf-pro-text-small);
+  font-weight: 600;
+}
+
+.button {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+}
+
+.title {
+  justify-self: start;
+}
+
+.background {
+  position: relative;
+
+  overflow: hidden;
+  width: 192px;
+  height: 112px;
+  border-radius: 8px;
+
+  display: grid;
+  place-items: center;
+}
+
+.image {
+  position: absolute;
+
+  width: 240px;
+  height: 137.14px;
+}
+
+.link {
+  justify-self: end;
+
+  color: var(--blue-accent);
+  opacity: 0.9;
+}
+
+.link:hover {
+  opacity: 1;
+}

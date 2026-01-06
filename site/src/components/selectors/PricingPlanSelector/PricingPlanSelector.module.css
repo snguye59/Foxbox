@@ -1,0 +1,77 @@
+.button {
+  position: relative;
+
+  height: 44px;
+  padding: 0 3px;
+  border-radius: 30px;
+
+  display: grid;
+  align-items: center;
+
+  background: var(--orange-accent);
+}
+
+.texts {
+  z-index: 1;
+
+  display: grid;
+  gap: 10px;
+  grid-auto-flow: column;
+
+  font: var(--sf-pro-text-medium);
+  font-weight: 600;
+}
+
+.monthlyText,
+.annuallyText {
+  width: 106px;
+  height: 38px;
+  border-radius: 30px;
+
+  transition: var(--fast-transition);
+}
+
+.button.annually .monthlyText {
+  color: white;
+}
+
+.button.monthly .annuallyText {
+  color: white;
+}
+
+.toggleSwitch {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+
+  width: 106px;
+  height: 38px;
+  border-radius: 30px;
+
+  background: white;
+
+  transition: var(--fast-transition);
+}
+
+.button.annually .toggleSwitch {
+  transform: translateX(111px);
+
+  width: 111px;
+}
+
+.badge {
+  position: absolute;
+  top: 36px;
+  right: 6px;
+
+  padding: 2px 8px;
+  border-radius: 12px;
+
+  display: grid;
+  align-items: center;
+
+  background: var(--orange-tag);
+
+  font: var(--sf-pro-text-small);
+  font-weight: 600;
+}

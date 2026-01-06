@@ -1,0 +1,56 @@
+.button {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 10px;
+
+  display: grid;
+  grid-template-columns: 45% 55%;
+
+  background: white;
+  box-shadow: var(--light-soft-shadow);
+
+  transition: var(--fast-transition);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+
+  box-shadow: var(--light-medium-shadow);
+}
+
+.text {
+  padding: 0 20px;
+
+  display: grid;
+  align-items: center;
+}
+
+.text p {
+  text-align: center;
+
+  font: var(--sf-pro-text-medium);
+  font-weight: 500;
+}
+
+.iconBackground {
+  padding: 30px 0;
+
+  display: grid;
+  justify-items: center;
+}
+
+.iconBackground.red {
+  background: var(--red-tag);
+}
+
+.iconBackground.yellow {
+  background: var(--yellow-tag);
+}
+
+.iconBackground.pink {
+  background: var(--pink-tag);
+}
+
+.iconBackground.gray {
+  background: var(--gray-tag);
+}

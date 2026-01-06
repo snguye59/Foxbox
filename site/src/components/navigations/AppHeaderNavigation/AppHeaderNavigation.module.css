@@ -1,0 +1,88 @@
+.navigation {
+  z-index: 2;
+  position: relative;
+
+  width: 100%;
+  white-space: nowrap;
+
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: start;
+  gap: 100px;
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  display: none;
+
+  transition: var(--fast-transition);
+}
+
+.buttons {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.linkButton {
+  white-space: nowrap;
+
+  color: var(--dark-text2);
+
+  font: var(--sf-pro-text-caption);
+  font-weight: 600;
+
+  transition: var(--fast-transition);
+}
+
+.linkButton:hover,
+.linkButton.active {
+  color: var(--dark-text);
+}
+
+.buttons.entry {
+  gap: 30px;
+  justify-self: end;
+}
+
+.tryButton {
+  padding: 10px 22px;
+  border-radius: 30px;
+
+  display: grid;
+  align-items: center;
+
+  background: var(--orange-accent);
+  color: white;
+  opacity: 0.9;
+
+  font: var(--sf-pro-text-caption);
+  font-weight: 600;
+
+  transition: var(--fast-transition);
+}
+
+.tryButton:hover {
+  opacity: 1;
+}
+
+.hamburgerButton {
+  display: none;
+
+  opacity: 0.8;
+}
+
+@media (max-width: 1170px) {
+  .linkButton,
+  .tryButton {
+    display: none;
+  }
+  .menu,
+  .hamburgerButton {
+    display: block;
+  }
+}

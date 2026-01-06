@@ -1,0 +1,31 @@
+.button {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+
+  display: grid;
+  place-items: center;
+
+  color: black;
+
+  font: var(--sf-pro-text-small);
+  font-weight: 500;
+}
+
+.button.currentDate {
+  background: #eeeeee;
+}
+
+.button:hover,
+.button.active {
+  color: white;
+  background: var(--blue-accent);
+}
+
+.button.disabled {
+  color: rgba(0, 0, 0, 0.4);
+  background: none;
+
+  cursor: not-allowed;
+  pointer-events: none;
+}

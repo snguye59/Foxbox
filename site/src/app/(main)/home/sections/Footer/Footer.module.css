@@ -1,0 +1,96 @@
+.section {
+  position: relative;
+
+  width: 100%;
+  margin-top: clamp(300px, 36vw, 440px);
+  margin-bottom: 30px;
+
+  display: grid;
+  justify-items: center;
+}
+
+.wave {
+  z-index: 1;
+
+  position: absolute;
+  bottom: -100px;
+
+  width: 100%;
+  min-width: 2560px;
+  aspect-ratio: 2560 / 960;
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  background-image: url("/images/wave-backgrounds/home-waves/home-wave6.svg");
+}
+
+@media (max-width: 1600px) {
+  .wave {
+    left: -300px;
+  }
+}
+
+@media (max-width: 900px) {
+  .wave {
+    bottom: -160px;
+
+    aspect-ratio: 2560 / 1306;
+
+    background-image: url("/images/wave-backgrounds/home-waves/home-wave6-large.svg");
+  }
+}
+
+@media (max-width: 400px) {
+  .wave {
+    bottom: -100px;
+  }
+}
+
+.content {
+  z-index: 1;
+  position: relative;
+
+  width: 100%;
+  max-width: 1250px;
+  padding: 0 30px;
+
+  display: grid;
+  justify-items: center;
+}
+
+@media (max-width: 690px) {
+  .content {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 330px) {
+  .content {
+    padding: 0 10px;
+  }
+}
+
+.illustration {
+  position: absolute;
+  top: -222px;
+}
+
+@media (min-width: 900px) {
+  .illustration {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .illustration {
+    top: -200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .illustration {
+    top: -180px;
+    right: -60px;
+  }
+}

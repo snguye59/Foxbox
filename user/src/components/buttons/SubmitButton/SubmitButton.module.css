@@ -1,0 +1,47 @@
+.button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+
+  color: white;
+  opacity: 0.9;
+
+  display: grid;
+  place-items: center;
+
+  font: var(--sf-pro-text-caption);
+  font-weight: 600;
+
+  transition: var(--fast-transition);
+}
+
+.button.blue {
+  background: var(--blue-accent);
+}
+
+.button.error {
+  background: var(--error-semantic);
+}
+
+.button div {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+}
+
+.button svg path {
+  fill: white;
+}
+
+.button svg :global {
+  animation: spin 1s linear infinite;
+}
+
+.button.submit:hover {
+  opacity: 1;
+}
+
+.button.loading {
+  pointer-events: none;
+}

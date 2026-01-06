@@ -1,0 +1,32 @@
+:root {
+  /* Background */
+  --light-background: #f2f6ff;
+  --dark-background: #0a2240;
+
+  /* Semantic */
+  --error-semantic: #ff4136;
+  --warning-semantic: #ffdc00;
+  --success-semantic: #2ecc40;
+
+  /* Accent */
+  --blue-accent: #0572ec;
+  --cyan-accent: #00d7ff;
+  --purple-accent: #635bff;
+  --orange-accent: #f15637;
+
+  /* Text */
+  --light-text: white;
+  --light-text2: rgba(255, 255, 255, 0.7);
+  --dark-text: black;
+  --dark-text2: rgba(0, 0, 0, 0.7);
+
+  /* Tag */
+  --red-tag: #ff7979;
+  --pink-tag: #eaa9e7;
+  --blue-tag: #83d2f5;
+  --gray-tag: #adb6c4;
+  --green-tag: #91e2a8;
+  --yellow-tag: #f5d779;
+  --purple-tag: #bcb3f0;
+  --orange-tag: #f2a582;
+}

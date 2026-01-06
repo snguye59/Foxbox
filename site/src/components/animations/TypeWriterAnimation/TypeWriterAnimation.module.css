@@ -1,0 +1,8 @@
+.animation::after {
+  content: "│";
+  font-weight: normal;
+}
+
+.animation.blinkCursor::after :global {
+  animation: blink 1.5s step-start 0.8s infinite;
+}

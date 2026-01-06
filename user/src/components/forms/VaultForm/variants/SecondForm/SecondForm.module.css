@@ -1,0 +1,36 @@
+.sections {
+  width: 100%;
+
+  display: grid;
+  gap: 24px;
+}
+
+.sections h5 {
+  margin-bottom: 6px;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  justify-self: center;
+
+  font: var(--sf-pro-display-h5);
+}
+
+@media (max-width: 400px) {
+  .sections h5 {
+    max-width: calc(100% - 30px);
+  }
+}
+
+.card {
+  justify-self: center;
+}
+
+.buttons {
+  margin-top: 6px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}

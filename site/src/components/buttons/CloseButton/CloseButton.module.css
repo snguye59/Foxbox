@@ -1,0 +1,11 @@
+.button {
+  display: grid;
+
+  opacity: 0.2;
+
+  transition: var(--fast-transition);
+}
+
+.button:hover {
+  opacity: 0.6;
+}

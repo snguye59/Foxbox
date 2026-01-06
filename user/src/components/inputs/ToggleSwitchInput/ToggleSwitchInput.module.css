@@ -1,0 +1,66 @@
+.toggle {
+  position: relative;
+}
+
+.input {
+  display: none;
+}
+
+.switch {
+  position: absolute;
+
+  background: #cccccc;
+
+  transition: var(--fast-transition);
+}
+
+.switch.small {
+  width: 28px;
+  height: 16px;
+  border-radius: 8px;
+}
+
+.switch.big {
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+}
+
+.input:checked + .switch {
+  background: var(--blue-accent);
+}
+
+.switch::before {
+  position: absolute;
+
+  border-radius: 50%;
+  content: "";
+
+  background: white;
+
+  transition: var(--fast-transition);
+}
+
+.switch.small::before {
+  left: 2px;
+  top: 2px;
+
+  width: 12px;
+  height: 12px;
+}
+
+.switch.big::before {
+  left: 3px;
+  top: 3px;
+
+  width: 18px;
+  height: 18px;
+}
+
+.input:checked + .switch.small::before {
+  transform: translateX(12px);
+}
+
+.input:checked + .switch.big::before {
+  transform: translateX(18px);
+}

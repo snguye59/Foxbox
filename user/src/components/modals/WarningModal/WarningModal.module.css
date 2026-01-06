@@ -1,0 +1,45 @@
+.modal {
+  width: clamp(300px, 100%, 408px);
+  padding: 24px;
+  border-radius: 20px;
+
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+
+  background: white;
+  box-shadow: var(--dark-medium-shadow);
+}
+
+.modal :global {
+  animation: slideDownFadeIn 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.texts {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.texts p:nth-of-type(1) {
+  color: var(--dark-text);
+
+  font: var(--sf-pro-text-medium);
+  font-weight: 600;
+}
+
+.texts p:nth-of-type(2) {
+  text-align: center;
+
+  color: var(--dark-text2);
+
+  font: var(--sf-pro-text-caption);
+}
+
+.buttons {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}

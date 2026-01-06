@@ -1,0 +1,25 @@
+.input {
+  width: 100%;
+  height: 24px;
+}
+
+.slider {
+  width: 100%;
+  appearance: none;
+  height: 8px;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px var(--blue-accent);
+
+  background: white;
+
+  cursor: pointer;
+}

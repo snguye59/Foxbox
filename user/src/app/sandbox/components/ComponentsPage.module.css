@@ -1,0 +1,21 @@
+.wrapper {
+  position: relative;
+
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 10px;
+
+  display: grid;
+  gap: 30px;
+  place-items: start;
+
+  background: var(--light-background);
+}
+
+.vaultsNavigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* display: none; */
+}

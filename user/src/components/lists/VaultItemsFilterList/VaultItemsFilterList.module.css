@@ -1,0 +1,95 @@
+.list {
+  width: 100%;
+
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+
+  scroll-behavior: smooth;
+}
+
+.chevronButton {
+  margin-left: 18px;
+
+  display: grid;
+  gap: 6px;
+  grid-auto-flow: column;
+  align-items: center;
+
+  color: var(--dark-text2);
+
+  font: var(--sf-pro-text-tiny);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.chevronButton svg {
+  transform: rotate(-90deg);
+
+  opacity: 0.6;
+
+  transition: var(--fast-transition);
+}
+
+.chevronButton.expanded svg {
+  transform: rotate(0);
+}
+
+.filterGroup {
+  width: 100%;
+
+  display: grid;
+  gap: 4px;
+}
+
+.filterGroup.show > button {
+  margin-top: 0;
+
+  opacity: 1;
+}
+
+.filterGroup.hide {
+  gap: 0px;
+}
+
+.filterGroup.hide > button {
+  margin-top: -32px;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+.filterButton {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 8px;
+
+  display: grid;
+  grid-template-columns: 24px auto;
+  gap: 8px;
+  align-items: center;
+  justify-content: start;
+
+  transition: var(--instant-transition);
+}
+
+.filterButton:hover,
+.filterButton.active {
+  margin-top: 0 !important;
+
+  background: white;
+  opacity: 1 !important;
+
+  pointer-events: auto !important;
+}
+
+.filterButton p {
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  font: var(--sf-pro-text-small);
+  font-weight: 500;
+}

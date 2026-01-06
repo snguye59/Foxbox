@@ -1,0 +1,57 @@
+.modal {
+  width: clamp(300px, 100%, 308px);
+  padding: 24px;
+  border-radius: 16px;
+
+  display: grid;
+  gap: 20px;
+
+  background: white;
+  box-shadow: var(--light-medium-shadow);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 30px auto 30px;
+  place-items: center;
+}
+
+.header p {
+  font: var(--sf-pro-text-caption);
+  font-weight: 500;
+}
+
+.monthButtons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 16px;
+  column-gap: clamp(4px, calc((100% - 228px) / 2), 16px);
+}
+
+.monthButtons button {
+  width: 76px;
+  height: 36px;
+  border-radius: 10px;
+
+  display: grid;
+  place-items: center;
+
+  font: var(--sf-pro-text-caption);
+  font-weight: 500;
+}
+
+.monthButtons button.currentMonth {
+  background: #eeeeee;
+}
+
+.monthButtons button:hover,
+.monthButtons button.active {
+  color: white;
+  background: var(--blue-accent);
+}
+
+.submitButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}

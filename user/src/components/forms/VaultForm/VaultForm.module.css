@@ -1,0 +1,34 @@
+.form {
+  position: relative;
+
+  width: clamp(300px, 100%, 500px);
+  border-radius: 12px;
+  padding: 30px;
+
+  background: white;
+  box-shadow: var(--dark-medium-shadow);
+
+  transition: var(--medium-transition);
+}
+
+.form :global {
+  animation: scaleUpFadeIn 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@media (max-width: 400px) {
+  .form {
+    padding: 20px;
+  }
+}
+
+.button {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+}
+
+.content {
+  display: grid;
+  gap: 30px;
+  place-items: center;
+}

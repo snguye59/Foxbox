@@ -1,0 +1,98 @@
+.card {
+  position: relative;
+
+  border-radius: 20px;
+
+  display: grid;
+  align-items: start;
+
+  background: #f6f9fc;
+  box-shadow: var(--dark-medium-shadow);
+}
+
+.card.small {
+  width: clamp(300px, 100%, 580px);
+}
+
+.card.big {
+  overflow-x: scroll;
+  width: clamp(300px, 100%, 1190px);
+  height: 500px;
+}
+
+.card::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  border-radius: 20px;
+  content: "";
+
+  pointer-events: none;
+}
+
+.texts {
+  width: 100%;
+  max-width: 510px;
+
+  display: grid;
+  gap: 20px;
+  justify-items: start;
+}
+
+.texts p:nth-of-type(1) {
+  max-width: 400px;
+  font: var(--sf-pro-display-h4);
+}
+
+.texts p:nth-of-type(2) {
+  font: var(--sf-pro-text-medium);
+}
+
+.card.textsFirst .texts {
+  padding: clamp(30px, 8%, 40px) clamp(30px, 8%, 40px) 0;
+}
+
+.card.illustrationFirst .texts {
+  padding: 0 clamp(30px, 8%, 40px) clamp(40px, 8%, 60px);
+}
+
+.card5 .texts p:nth-of-type(1) {
+  max-width: 430px;
+}
+
+.illustration {
+  position: relative;
+}
+
+.card1 .illustration {
+  aspect-ratio: 580 / 468;
+}
+
+.card2 .illustration {
+  aspect-ratio: 580 / 448;
+}
+
+.card3 .illustration {
+  position: absolute;
+  bottom: 0;
+
+  width: 1190px;
+  height: 700px;
+}
+
+@media (max-width: 360px) {
+  .card.card3 {
+    height: 580px;
+  }
+}
+
+.card4 .illustration {
+  aspect-ratio: 580 / 448;
+}
+
+.card5 .illustration {
+  aspect-ratio: 580 / 506;
+}

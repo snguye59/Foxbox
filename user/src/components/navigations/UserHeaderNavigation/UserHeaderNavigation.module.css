@@ -1,0 +1,102 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+
+  width: 100%;
+  height: 78px;
+
+  background: var(--light-background);
+}
+
+.navigation > * {
+  position: absolute;
+}
+
+.logo {
+  top: 16px;
+  left: 20px;
+
+  transition: var(--medium-transition);
+}
+
+@media (max-width: 330px) {
+  .logo {
+    left: 10px;
+  }
+}
+
+.notification {
+  top: 23px;
+  left: 270px;
+}
+
+@media (max-width: 930px) {
+  .notification {
+    left: auto;
+    right: 74px;
+  }
+}
+
+.bellButton {
+  width: 32px;
+  height: 32px;
+
+  display: grid;
+}
+
+.title {
+  top: 23px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font: var(--sf-pro-display-h5);
+}
+
+@media (max-width: 500px) {
+  .title {
+    display: none;
+  }
+}
+
+.hamburgerButton {
+  position: fixed;
+  top: 27px;
+  right: 20px;
+
+  display: none;
+
+  opacity: 0.8;
+}
+
+@media (max-width: 930px) {
+  .hamburgerButton {
+    display: block;
+  }
+}
+
+.divider1 {
+  bottom: 0;
+  left: 12px;
+
+  width: 216px;
+}
+
+.divider2 {
+  bottom: 0;
+  left: 252px;
+
+  width: calc(100% - 252px);
+}
+
+@media (max-width: 760px) {
+  .divider1 {
+    display: none;
+  }
+  .divider2 {
+    left: 0;
+
+    width: 100%;
+  }
+}

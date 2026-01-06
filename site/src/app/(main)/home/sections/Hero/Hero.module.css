@@ -1,0 +1,249 @@
+.section {
+  position: relative;
+
+  width: 100%;
+  margin-top: clamp(84px, 10vw, 124px);
+
+  display: grid;
+  justify-items: center;
+}
+
+.video {
+  overflow: scroll;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+
+  display: grid;
+  place-items: center;
+}
+
+@media (max-width: 690px) {
+  .video {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 330px) {
+  .video {
+    padding: 10px;
+  }
+}
+
+.wave {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  aspect-ratio: 2560 / 1100;
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  background-image: url("/images/wave-backgrounds/home-waves/home-wave1.svg");
+}
+
+@media (max-width: 690px) {
+  .wave {
+    bottom: -92vw;
+
+    aspect-ratio: 2560 / 5120;
+
+    background-image: url("/images/wave-backgrounds/home-waves/home-wave1-large.svg");
+  }
+}
+
+.content {
+  z-index: 1;
+
+  width: 100%;
+  max-width: 1250px;
+  padding: 0 30px;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 690px) {
+  .content {
+    padding: 0 15px;
+
+    grid-template-columns: none;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 330px) {
+  .content {
+    padding: 0 10px;
+  }
+}
+
+.texts {
+  width: 460px;
+
+  display: grid;
+  gap: 30px;
+  justify-items: start;
+}
+
+.title {
+  font: var(--sf-pro-display-h1);
+}
+
+.description {
+  max-width: 434px;
+
+  font: var(--sf-pro-text-large);
+}
+
+.buttons {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .texts {
+    width: 370px;
+  }
+
+  .title {
+    font: var(--sf-pro-display-h2);
+  }
+
+  .description {
+    max-width: 330px;
+
+    font: var(--sf-pro-text-caption);
+  }
+}
+
+@media (max-width: 690px) {
+  .texts {
+    width: auto;
+
+    gap: 20px;
+  }
+}
+
+.animation {
+  position: relative;
+
+  width: 100%;
+}
+
+.animation > div {
+  position: absolute;
+  right: 0;
+
+  margin-top: -10%;
+  margin-right: -30px;
+  transform-origin: left top;
+}
+
+@media (max-width: 1190px) {
+  .animation > div {
+    left: 0;
+    right: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .animation > div {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 900px) {
+  .animation > div {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 800px) {
+  .animation > div {
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 690px) {
+  .animation > div {
+    left: 50%;
+
+    margin-top: 0;
+    transform: scale(0.95) translateX(-50%);
+  }
+}
+
+@media (max-width: 680px) {
+  .animation > div {
+    left: 50%;
+
+    margin-top: 0;
+    transform: scale(0.9) translateX(-50%);
+  }
+}
+
+@media (max-width: 640px) {
+  .animation > div {
+    transform: scale(0.85) translateX(-50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .animation > div {
+    transform: scale(0.8) translateX(-50%);
+  }
+}
+
+@media (max-width: 570px) {
+  .animation > div {
+    transform: scale(0.75) translateX(-50%);
+  }
+}
+
+@media (max-width: 530px) {
+  .animation > div {
+    transform: scale(0.7) translateX(-50%);
+  }
+}
+
+@media (max-width: 500px) {
+  .animation > div {
+    transform: scale(0.65) translateX(-50%);
+  }
+}
+
+@media (max-width: 460px) {
+  .animation > div {
+    transform: scale(0.6) translateX(-50%);
+  }
+}
+
+@media (max-width: 430px) {
+  .animation > div {
+    transform: scale(0.55) translateX(-50%);
+  }
+}
+
+@media (max-width: 400px) {
+  .animation > div {
+    transform: scale(0.5) translateX(-50%);
+  }
+}
+
+@media (max-width: 360px) {
+  .animation > div {
+    transform: scale(0.45) translateX(-50%);
+  }
+}

@@ -1,0 +1,84 @@
+.form {
+  width: clamp(300px, 100%, 580px);
+  padding: 60px 70px;
+  border-radius: 16px;
+
+  background: white;
+  box-shadow: var(--light-heavy-shadow);
+
+  transition: var(--medium-transition);
+}
+
+.form.showError :global {
+  animation: shake 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@media (max-width: 510px) {
+  .form {
+    padding: 30px 35px;
+    border-radius: 12px;
+  }
+}
+
+.formSection {
+  display: grid;
+  gap: 30px;
+}
+
+.formSection h5 {
+  font: var(--sf-pro-display-h5);
+}
+
+.password {
+  display: grid;
+  gap: 6px;
+}
+
+.suggestion {
+  display: grid;
+  gap: 4px;
+
+  font: var(--sf-pro-text-tiny);
+}
+
+.suggestion.weak svg path {
+  fill: var(--error-semantic);
+}
+
+.suggestion.fair svg path {
+  fill: var(--warning-semantic);
+}
+
+.suggestion.good svg path,
+.suggestion.strong svg path {
+  fill: var(--success-semantic);
+}
+
+.suggestion.separateColumn {
+  grid-template-columns: 18px auto;
+}
+
+.button {
+  margin-top: 20px;
+}
+
+.texts {
+  text-align: center;
+
+  justify-self: center;
+
+  color: rgba(0, 0, 0, 0.7);
+
+  font: var(--sf-pro-text-small);
+}
+
+.texts a {
+  color: var(--blue-accent);
+  opacity: 0.9;
+
+  font-weight: 600;
+}
+
+.texts a:hover {
+  opacity: 1;
+}

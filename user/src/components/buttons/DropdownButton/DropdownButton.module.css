@@ -1,0 +1,26 @@
+.button {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  word-break: break-all;
+  text-align: start;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-items: start;
+  align-items: center;
+  gap: 6px;
+
+  font: var(--sf-pro-text-small);
+  font-weight: 500;
+
+  transition: var(--fast-transition);
+}
+
+.button:hover {
+  background: #eeeeee;
+}
+
+.button svg path {
+  fill: var(--blue-accent);
+}

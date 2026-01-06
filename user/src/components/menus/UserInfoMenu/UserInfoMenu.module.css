@@ -1,0 +1,52 @@
+.menu {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+
+  display: grid;
+  gap: 12px;
+
+  background: #e3e8ff;
+  box-shadow: var(--light-medium-shadow);
+}
+
+.menu :global {
+  animation: slideDownScaleUpFadeIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.account {
+  display: grid;
+  grid-template-columns: 36px 164px;
+  align-items: center;
+  gap: 12px;
+}
+
+.texts p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.texts p:nth-of-type(1) {
+  color: var(--dark-text);
+
+  font: var(--sf-pro-text-small);
+  font-weight: 600;
+}
+
+.texts p:nth-of-type(2) {
+  color: var(--dark-text2);
+
+  font: var(--sf-pro-text-tiny);
+}
+
+.links {
+  display: grid;
+  gap: 20px;
+}
+
+.appInfo {
+  color: var(--dark-text2);
+
+  font: var(--sf-pro-text-tiny);
+}
