@@ -41,7 +41,7 @@ const AppFooterNavigation = () => {
         </div>
       </div>
       <div className={styles.copyright}>
-        <p>Fobox © 2024. All rights reserved.</p>
+        <p>Fobox © 2026. All rights reserved.</p>
         <SocialMediaList />
       </div>
     </div>
