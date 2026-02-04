@@ -20,17 +20,9 @@ export const metadata = {
       { url: "/images/logos/foxbox-16x16.png" },
     ],
   },
-  openGraph: {
-    title: "Foxbox | Secure Your Digital Life",
-    description:
-      "Effortlessly manage your passwords with Foxbox. Start your free trial today.",
-    images: [
-      {
-        url: "",
-        width: 0,
-        height: 0,
-      },
-    ],
+  robots: {
+    index: false,
+    follow: false,
   },
 };
 
